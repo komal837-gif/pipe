@@ -58,6 +58,29 @@
                 {{title1 | summary}}
             </p>
         </div>
-
+        <h5 class="bg-warning p-2">Filter Pipe</h5>
+        <div>
+            <input [(ngModel)]="searchedPlayer" type="text" class="form-control mb-4">
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>sr.no.</th>
+                    <th>player name</th>
+                    <th>team</th>
+                    <th>player age</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let player of playersArr | filter : searchedPlayer;let i = index">
+                    <td>{{i + 1}}</td>
+                    <td>{{player.name}}</td>
+                    <td>{{player.team}}</td>
+                    <td>{{player.age}}</td>
+                    <td>{{player.role}}</td>
+                </tr>
+            </tbody>
+        </table>
         
 </div>

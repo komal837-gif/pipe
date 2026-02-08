@@ -16,6 +16,6 @@ export class summaryPipe implements PipeTransform{
         if(!limit){
             limit=50
         }
-        return value.substring(0,50) + '....'
+        return value.substring(0,50) + '...'
     }   
 }

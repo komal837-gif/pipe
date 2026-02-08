@@ -12,6 +12,7 @@ import { summaryPipe } from './shared/pipe/summary.pipe';
 
 
 import { FormsModule } from '@angular/forms';
+import { filterpipe } from './shared/pipe/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     LowerCase,
     CreditCard,
     summaryPipe,
+    filterpipe
  
   ],
   imports: [
